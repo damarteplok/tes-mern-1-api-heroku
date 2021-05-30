@@ -1,0 +1,126 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Damar Test Swagger",
+      "description": "My User Project Application API",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:3001",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "TEST DOANG",
+        "description": "TEST DOANG anjir"
+      },
+      {
+        "name": "Resource",
+        "description": "Resource CRUD Test !!"
+      }
+    ],
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+        "/": {
+          "get": {
+            "tags": ["TEST DOANG"],
+            "summary": "test hellow world",
+            "responses": {
+              "200": {
+                "description": "OK"
+              }
+            }
+          }
+        },
+        "/api/test-slug/{slug}": {
+            "parameters": [
+                {
+                    "name": "slug",
+                    "in": "path",
+                    "required": true,
+                    "description": "Test Params doang",
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": ["TEST DOANG"],
+                "summary": "test params",
+                "responses": {
+                "200": {
+                    "description": "OK"
+                }
+                }
+            }
+        },
+        "/api/resources-list": {
+            "get": {
+                "tags": ["Resource"],
+                "summary": "Get All list",
+                "responses": {
+                "200": {
+                    "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/resources": {
+            "post": {
+                "tags": ["Resource"],
+                "summary": "Post Resource",
+                "parameters": [
+                    {
+                      "name": "form",
+                      "in": "body",
+                      "description": "form"
+                    }
+                  ],
+                
+                "responses": {
+                "200": {
+                    "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/resources/:id": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "description": "description",
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": ["Resource"],
+                "summary": "test summary",
+                "responses": {
+                "200": {
+                    "description": "OK"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete resource with given ID",
+                "tags": [
+                  "Resource"
+                ],
+                "responses": {
+                  "200": {
+                    "description": "Resource is deleted"
+                  }
+                }
+            }
+        }
+      },
+      "definitions": {
+        
+      }
+}
+
+  
