@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 const bodyParser = require("body-parser")
 const swaggerJsdoc = require("./swagger.json")
 const swaggerUi = require("swagger-ui-express")
